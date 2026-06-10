@@ -1,0 +1,75 @@
+{
+  "extName": {
+    "message": "Site Zoom Lock"
+  },
+  "extShortName": {
+    "message": "Zoom Lock"
+  },
+  "extDescription": {
+    "message": "按網站鎖定 Chrome 網頁縮放，並支援自訂目標縮放值。"
+  },
+  "popupHeading": {
+    "message": "Site Zoom Lock"
+  },
+  "statusChecking": {
+    "message": "正在檢查"
+  },
+  "statusUnsupported": {
+    "message": "目前頁面無法控制"
+  },
+  "statusSiteOff": {
+    "message": "此網站已關閉"
+  },
+  "statusLockedTo": {
+    "message": "已鎖定為 $zoom$",
+    "placeholders": {
+      "zoom": {
+        "content": "$1"
+      }
+    }
+  },
+  "extensionUnavailable": {
+    "message": "擴充功能暫不可用"
+  },
+  "rulesPanelAria": {
+    "message": "縮放規則"
+  },
+  "thisWebsiteLabel": {
+    "message": "此網站:"
+  },
+  "siteSwitchLabel": {
+    "message": "開啟或關閉此網站縮放鎖定"
+  },
+  "targetZoomLabel": {
+    "message": "目標縮放"
+  },
+  "zoomRangeText": {
+    "message": "請選擇 Chrome 支援的縮放級別。"
+  },
+  "currentZoomLabel": {
+    "message": "目前縮放"
+  },
+  "siteNoActivePage": {
+    "message": "沒有作用中的頁面"
+  },
+  "siteUnsupported": {
+    "message": "不支援的頁面"
+  },
+  "siteLocalFiles": {
+    "message": "本機檔案"
+  },
+  "siteEnabledSuccess": {
+    "message": "已開啟此網站縮放鎖定"
+  },
+  "siteDisabledSuccess": {
+    "message": "已關閉此網站縮放鎖定"
+  },
+  "zoomSavedSuccess": {
+    "message": "目標縮放已儲存: $zoom$",
+    "placeholders": {
+      "zoom": {
+        "content": "$1"
+      }
+    }
+  }
+}

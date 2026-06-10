@@ -1,0 +1,75 @@
+{
+  "extName": {
+    "message": "Site Zoom Lock"
+  },
+  "extShortName": {
+    "message": "Zoom Lock"
+  },
+  "extDescription": {
+    "message": "各サイトを Chrome でお好みのズーム倍率に固定します。"
+  },
+  "popupHeading": {
+    "message": "Site Zoom Lock"
+  },
+  "statusChecking": {
+    "message": "確認中"
+  },
+  "statusUnsupported": {
+    "message": "このページは制御できません"
+  },
+  "statusSiteOff": {
+    "message": "このサイトはオフです"
+  },
+  "statusLockedTo": {
+    "message": "$zoom$ に固定",
+    "placeholders": {
+      "zoom": {
+        "content": "$1"
+      }
+    }
+  },
+  "extensionUnavailable": {
+    "message": "拡張機能を利用できません"
+  },
+  "rulesPanelAria": {
+    "message": "ズームルール"
+  },
+  "thisWebsiteLabel": {
+    "message": "このサイト:"
+  },
+  "siteSwitchLabel": {
+    "message": "このサイトのズーム固定をオンまたはオフにする"
+  },
+  "targetZoomLabel": {
+    "message": "目標ズーム"
+  },
+  "zoomRangeText": {
+    "message": "Chrome がサポートするズーム値を選択してください。"
+  },
+  "currentZoomLabel": {
+    "message": "現在のズーム"
+  },
+  "siteNoActivePage": {
+    "message": "アクティブなページがありません"
+  },
+  "siteUnsupported": {
+    "message": "対応していないページ"
+  },
+  "siteLocalFiles": {
+    "message": "ローカルファイル"
+  },
+  "siteEnabledSuccess": {
+    "message": "このサイトのズーム固定をオンにしました"
+  },
+  "siteDisabledSuccess": {
+    "message": "このサイトのズーム固定をオフにしました"
+  },
+  "zoomSavedSuccess": {
+    "message": "目標ズームを保存しました: $zoom$",
+    "placeholders": {
+      "zoom": {
+        "content": "$1"
+      }
+    }
+  }
+}

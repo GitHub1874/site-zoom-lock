@@ -1,0 +1,75 @@
+{
+  "extName": {
+    "message": "Site Zoom Lock"
+  },
+  "extShortName": {
+    "message": "Zoom Lock"
+  },
+  "extDescription": {
+    "message": "Держит каждый сайт на выбранном уровне масштабирования Chrome."
+  },
+  "popupHeading": {
+    "message": "Site Zoom Lock"
+  },
+  "statusChecking": {
+    "message": "Проверка"
+  },
+  "statusUnsupported": {
+    "message": "Этой страницей нельзя управлять"
+  },
+  "statusSiteOff": {
+    "message": "Этот сайт отключен"
+  },
+  "statusLockedTo": {
+    "message": "Закреплено на $zoom$",
+    "placeholders": {
+      "zoom": {
+        "content": "$1"
+      }
+    }
+  },
+  "extensionUnavailable": {
+    "message": "Расширение недоступно"
+  },
+  "rulesPanelAria": {
+    "message": "Правила масштаба"
+  },
+  "thisWebsiteLabel": {
+    "message": "Этот сайт:"
+  },
+  "siteSwitchLabel": {
+    "message": "Включить или отключить фиксацию масштаба для этого сайта"
+  },
+  "targetZoomLabel": {
+    "message": "Целевой масштаб"
+  },
+  "zoomRangeText": {
+    "message": "Выберите значение масштаба, поддерживаемое Chrome."
+  },
+  "currentZoomLabel": {
+    "message": "Текущий масштаб"
+  },
+  "siteNoActivePage": {
+    "message": "Нет активной страницы"
+  },
+  "siteUnsupported": {
+    "message": "Неподдерживаемая страница"
+  },
+  "siteLocalFiles": {
+    "message": "Локальные файлы"
+  },
+  "siteEnabledSuccess": {
+    "message": "Фиксация масштаба включена для этого сайта"
+  },
+  "siteDisabledSuccess": {
+    "message": "Фиксация масштаба отключена для этого сайта"
+  },
+  "zoomSavedSuccess": {
+    "message": "Целевой масштаб сохранен: $zoom$",
+    "placeholders": {
+      "zoom": {
+        "content": "$1"
+      }
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "extName": {
+    "message": "Site Zoom Lock"
+  },
+  "extShortName": {
+    "message": "Zoom Lock"
+  },
+  "extDescription": {
+    "message": "Keep each website at your preferred Chrome zoom level."
+  },
+  "popupHeading": {
+    "message": "Site Zoom Lock"
+  },
+  "statusChecking": {
+    "message": "Checking"
+  },
+  "statusUnsupported": {
+    "message": "This page cannot be controlled"
+  },
+  "statusSiteOff": {
+    "message": "This website is off"
+  },
+  "statusLockedTo": {
+    "message": "Locked to $zoom$",
+    "placeholders": {
+      "zoom": {
+        "content": "$1"
+      }
+    }
+  },
+  "extensionUnavailable": {
+    "message": "Extension unavailable"
+  },
+  "rulesPanelAria": {
+    "message": "Zoom rules"
+  },
+  "thisWebsiteLabel": {
+    "message": "This website:"
+  },
+  "siteSwitchLabel": {
+    "message": "Enable zoom lock for this website"
+  },
+  "targetZoomLabel": {
+    "message": "Target zoom"
+  },
+  "zoomRangeText": {
+    "message": "Choose one of Chrome's supported zoom values."
+  },
+  "currentZoomLabel": {
+    "message": "Current zoom"
+  },
+  "siteNoActivePage": {
+    "message": "No active page"
+  },
+  "siteUnsupported": {
+    "message": "Unsupported page"
+  },
+  "siteLocalFiles": {
+    "message": "Local files"
+  },
+  "siteEnabledSuccess": {
+    "message": "Website zoom lock enabled"
+  },
+  "siteDisabledSuccess": {
+    "message": "Website zoom lock disabled"
+  },
+  "zoomSavedSuccess": {
+    "message": "Target zoom saved: $zoom$",
+    "placeholders": {
+      "zoom": {
+        "content": "$1"
+      }
+    }
+  }
+}

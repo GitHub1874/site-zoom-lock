@@ -1,0 +1,75 @@
+{
+  "extName": {
+    "message": "Site Zoom Lock"
+  },
+  "extShortName": {
+    "message": "Zoom Lock"
+  },
+  "extDescription": {
+    "message": "Mantén cada sitio web en tu nivel de zoom preferido de Chrome."
+  },
+  "popupHeading": {
+    "message": "Site Zoom Lock"
+  },
+  "statusChecking": {
+    "message": "Comprobando"
+  },
+  "statusUnsupported": {
+    "message": "Esta página no se puede controlar"
+  },
+  "statusSiteOff": {
+    "message": "Este sitio web está desactivado"
+  },
+  "statusLockedTo": {
+    "message": "Bloqueado en $zoom$",
+    "placeholders": {
+      "zoom": {
+        "content": "$1"
+      }
+    }
+  },
+  "extensionUnavailable": {
+    "message": "Extensión no disponible"
+  },
+  "rulesPanelAria": {
+    "message": "Reglas de zoom"
+  },
+  "thisWebsiteLabel": {
+    "message": "Este sitio web:"
+  },
+  "siteSwitchLabel": {
+    "message": "Activar o desactivar el bloqueo de zoom para este sitio web"
+  },
+  "targetZoomLabel": {
+    "message": "Zoom objetivo"
+  },
+  "zoomRangeText": {
+    "message": "Elige un valor de zoom compatible con Chrome."
+  },
+  "currentZoomLabel": {
+    "message": "Zoom actual"
+  },
+  "siteNoActivePage": {
+    "message": "No hay página activa"
+  },
+  "siteUnsupported": {
+    "message": "Página no compatible"
+  },
+  "siteLocalFiles": {
+    "message": "Archivos locales"
+  },
+  "siteEnabledSuccess": {
+    "message": "Bloqueo de zoom activado para este sitio web"
+  },
+  "siteDisabledSuccess": {
+    "message": "Bloqueo de zoom desactivado para este sitio web"
+  },
+  "zoomSavedSuccess": {
+    "message": "Zoom objetivo guardado: $zoom$",
+    "placeholders": {
+      "zoom": {
+        "content": "$1"
+      }
+    }
+  }
+}

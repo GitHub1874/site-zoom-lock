@@ -1,0 +1,75 @@
+{
+  "extName": {
+    "message": "Site Zoom Lock"
+  },
+  "extShortName": {
+    "message": "Zoom Lock"
+  },
+  "extDescription": {
+    "message": "按网站锁定 Chrome 网页缩放，并支持自定义目标缩放值。"
+  },
+  "popupHeading": {
+    "message": "Site Zoom Lock"
+  },
+  "statusChecking": {
+    "message": "正在检查"
+  },
+  "statusUnsupported": {
+    "message": "当前页面不可控制"
+  },
+  "statusSiteOff": {
+    "message": "本网站已关闭"
+  },
+  "statusLockedTo": {
+    "message": "已锁定为 $zoom$",
+    "placeholders": {
+      "zoom": {
+        "content": "$1"
+      }
+    }
+  },
+  "extensionUnavailable": {
+    "message": "扩展暂不可用"
+  },
+  "rulesPanelAria": {
+    "message": "缩放规则"
+  },
+  "thisWebsiteLabel": {
+    "message": "此网站:"
+  },
+  "siteSwitchLabel": {
+    "message": "开启或关闭本网站缩放锁定"
+  },
+  "targetZoomLabel": {
+    "message": "目标缩放"
+  },
+  "zoomRangeText": {
+    "message": "请选择 Chrome 支持的缩放档位。"
+  },
+  "currentZoomLabel": {
+    "message": "当前缩放"
+  },
+  "siteNoActivePage": {
+    "message": "没有活动页面"
+  },
+  "siteUnsupported": {
+    "message": "不支持的页面"
+  },
+  "siteLocalFiles": {
+    "message": "本地文件"
+  },
+  "siteEnabledSuccess": {
+    "message": "已开启本网站缩放锁定"
+  },
+  "siteDisabledSuccess": {
+    "message": "已关闭本网站缩放锁定"
+  },
+  "zoomSavedSuccess": {
+    "message": "目标缩放已保存: $zoom$",
+    "placeholders": {
+      "zoom": {
+        "content": "$1"
+      }
+    }
+  }
+}

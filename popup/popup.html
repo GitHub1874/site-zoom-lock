@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title data-i18n="extName">Site Zoom Lock</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="shell" aria-labelledby="title">
+      <header class="header">
+        <img class="logo" src="../icons/icon-48.png" width="48" height="48" alt="">
+        <div>
+          <h1 id="title" data-i18n="popupHeading">Zoom Lock</h1>
+          <p id="statusText" class="status-text" data-i18n="statusChecking">Checking</p>
+        </div>
+      </header>
+
+      <section class="rules-panel" aria-label="Zoom rules" data-i18n-aria-label="rulesPanelAria">
+        <div class="rule-row">
+          <div class="rule-copy">
+            <p class="rule-title" data-i18n="thisWebsiteLabel">This website:</p>
+            <p id="siteValue" class="rule-value">--</p>
+          </div>
+          <label class="switch" for="siteToggle">
+            <input id="siteToggle" type="checkbox" aria-describedby="statusText">
+            <span class="track" aria-hidden="true">
+              <span class="thumb"></span>
+            </span>
+            <span class="sr-only" data-i18n="siteSwitchLabel">Enable zoom lock for this website</span>
+          </label>
+        </div>
+
+        <div class="rule-row page-rule">
+          <div class="rule-copy">
+            <p class="rule-title" data-i18n="currentZoomLabel">Current zoom</p>
+            <p id="inlineZoomValue" class="rule-value">--</p>
+          </div>
+          <div class="zoom-editor">
+            <label id="zoomSelectLabel" class="input-label" for="zoomSelect" data-i18n="targetZoomLabel">Target zoom</label>
+            <div class="zoom-actions">
+              <select id="zoomSelect" class="zoom-select" aria-describedby="zoomRangeText"></select>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <p id="zoomRangeText" class="sr-only" data-i18n="zoomRangeText">Choose a supported Chrome zoom value.</p>
+      <p id="liveStatus" class="sr-only" role="status" aria-live="polite"></p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

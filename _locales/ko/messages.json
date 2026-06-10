@@ -1,0 +1,75 @@
+{
+  "extName": {
+    "message": "Site Zoom Lock"
+  },
+  "extShortName": {
+    "message": "Zoom Lock"
+  },
+  "extDescription": {
+    "message": "각 웹사이트를 원하는 Chrome 확대/축소 수준으로 고정합니다."
+  },
+  "popupHeading": {
+    "message": "Site Zoom Lock"
+  },
+  "statusChecking": {
+    "message": "확인 중"
+  },
+  "statusUnsupported": {
+    "message": "이 페이지는 제어할 수 없습니다"
+  },
+  "statusSiteOff": {
+    "message": "이 웹사이트는 꺼져 있습니다"
+  },
+  "statusLockedTo": {
+    "message": "$zoom$로 고정됨",
+    "placeholders": {
+      "zoom": {
+        "content": "$1"
+      }
+    }
+  },
+  "extensionUnavailable": {
+    "message": "확장 프로그램을 사용할 수 없음"
+  },
+  "rulesPanelAria": {
+    "message": "확대/축소 규칙"
+  },
+  "thisWebsiteLabel": {
+    "message": "이 웹사이트:"
+  },
+  "siteSwitchLabel": {
+    "message": "이 웹사이트의 확대/축소 고정 켜기 또는 끄기"
+  },
+  "targetZoomLabel": {
+    "message": "목표 확대/축소"
+  },
+  "zoomRangeText": {
+    "message": "Chrome에서 지원하는 확대/축소 값을 선택하세요."
+  },
+  "currentZoomLabel": {
+    "message": "현재 확대/축소"
+  },
+  "siteNoActivePage": {
+    "message": "활성 페이지 없음"
+  },
+  "siteUnsupported": {
+    "message": "지원되지 않는 페이지"
+  },
+  "siteLocalFiles": {
+    "message": "로컬 파일"
+  },
+  "siteEnabledSuccess": {
+    "message": "이 웹사이트의 확대/축소 고정이 켜졌습니다"
+  },
+  "siteDisabledSuccess": {
+    "message": "이 웹사이트의 확대/축소 고정이 꺼졌습니다"
+  },
+  "zoomSavedSuccess": {
+    "message": "목표 확대/축소 저장됨: $zoom$",
+    "placeholders": {
+      "zoom": {
+        "content": "$1"
+      }
+    }
+  }
+}
