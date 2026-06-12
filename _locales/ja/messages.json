@@ -47,16 +47,7 @@
     "message": "Chrome がサポートするズーム値を選択してください。"
   },
   "unsupportedZoomHelpTitle": {
-    "message": "Chrome のズームを手動で使用"
-  },
-  "unsupportedZoomHelpWindows": {
-    "message": "Ctrl を押しながら、プラス、マイナス、または 0 キーを押します"
-  },
-  "unsupportedZoomHelpMac": {
-    "message": "Command を押しながら、プラス、マイナス、または 0 キーを押します"
-  },
-  "unsupportedZoomHelpMenu": {
-    "message": "右上のメニューを開き、ズームを使用します"
+    "message": "手動ズームが必要です"
   },
   "currentZoomLabel": {
     "message": "現在のズーム"
@@ -88,16 +79,7 @@
     "message": "制御不可"
   },
   "unsupportedZoomHelpBody": {
-    "message": "Chrome は拡張機能によるこのページのズーム制御を許可していません。"
-  },
-  "unsupportedZoomHelpWindowsLabel": {
-    "message": "Windows / Linux"
-  },
-  "unsupportedZoomHelpMacLabel": {
-    "message": "Mac"
-  },
-  "unsupportedZoomHelpMenuLabel": {
-    "message": "Chrome メニュー"
+    "message": "Chrome の標準ズームを使ってください:"
   },
   "zoomRestoredTitle": {
     "message": "Site Zoom Lock: restored to $zoom$",
@@ -106,5 +88,31 @@
         "content": "$1"
       }
     }
+  },
+  "unsupportedZoomActionZoomInLabel": {
+    "message": "拡大"
+  },
+  "unsupportedZoomActionZoomOutLabel": {
+    "message": "縮小"
+  },
+  "unsupportedZoomActionResetLabel": {
+    "message": "リセット"
+  },
+  "unsupportedZoomShortcutStep": {
+    "message": "$modifier$ を押しながら $key$ を押す",
+    "placeholders": {
+      "modifier": {
+        "content": "$1"
+      },
+      "key": {
+        "content": "$2"
+      }
+    }
+  },
+  "keyboardModifierCtrl": {
+    "message": "Ctrl"
+  },
+  "keyboardModifierCommand": {
+    "message": "Command"
   }
 }

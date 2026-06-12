@@ -47,16 +47,7 @@
     "message": "Scegli un valore di zoom supportato da Chrome."
   },
   "unsupportedZoomHelpTitle": {
-    "message": "Usa manualmente lo zoom di Chrome"
-  },
-  "unsupportedZoomHelpWindows": {
-    "message": "Tieni premuto Ctrl, poi premi Più, Meno o 0"
-  },
-  "unsupportedZoomHelpMac": {
-    "message": "Tieni premuto Command, poi premi Più, Meno o 0"
-  },
-  "unsupportedZoomHelpMenu": {
-    "message": "Apri il menu in alto a destra, poi usa Zoom"
+    "message": "Zoom manuale richiesto"
   },
   "currentZoomLabel": {
     "message": "Zoom attuale"
@@ -88,16 +79,7 @@
     "message": "Non controllabile"
   },
   "unsupportedZoomHelpBody": {
-    "message": "Chrome non consente alle estensioni di controllare lo zoom di questa pagina."
-  },
-  "unsupportedZoomHelpWindowsLabel": {
-    "message": "Windows / Linux"
-  },
-  "unsupportedZoomHelpMacLabel": {
-    "message": "Mac"
-  },
-  "unsupportedZoomHelpMenuLabel": {
-    "message": "Menu Chrome"
+    "message": "Usa lo zoom integrato di Chrome:"
   },
   "zoomRestoredTitle": {
     "message": "Site Zoom Lock: restored to $zoom$",
@@ -106,5 +88,31 @@
         "content": "$1"
       }
     }
+  },
+  "unsupportedZoomActionZoomInLabel": {
+    "message": "Ingrandisci"
+  },
+  "unsupportedZoomActionZoomOutLabel": {
+    "message": "Riduci"
+  },
+  "unsupportedZoomActionResetLabel": {
+    "message": "Ripristina"
+  },
+  "unsupportedZoomShortcutStep": {
+    "message": "Tieni premuto $modifier$, poi premi $key$",
+    "placeholders": {
+      "modifier": {
+        "content": "$1"
+      },
+      "key": {
+        "content": "$2"
+      }
+    }
+  },
+  "keyboardModifierCtrl": {
+    "message": "Ctrl"
+  },
+  "keyboardModifierCommand": {
+    "message": "Command"
   }
 }

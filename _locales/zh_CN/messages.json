@@ -47,16 +47,7 @@
     "message": "请选择 Chrome 支持的缩放档位。"
   },
   "unsupportedZoomHelpTitle": {
-    "message": "此页面只能手动缩放"
-  },
-  "unsupportedZoomHelpWindows": {
-    "message": "按住 Ctrl，再按加号键、减号键或 0"
-  },
-  "unsupportedZoomHelpMac": {
-    "message": "按住 Command，再按加号键、减号键或 0"
-  },
-  "unsupportedZoomHelpMenu": {
-    "message": "打开右上角菜单，再使用“缩放”"
+    "message": "此页面需手动缩放"
   },
   "currentZoomLabel": {
     "message": "当前缩放"
@@ -88,16 +79,7 @@
     "message": "不可控制"
   },
   "unsupportedZoomHelpBody": {
-    "message": "Chrome 不允许扩展控制这个页面的缩放。"
-  },
-  "unsupportedZoomHelpWindowsLabel": {
-    "message": "Windows / Linux"
-  },
-  "unsupportedZoomHelpMacLabel": {
-    "message": "Mac"
-  },
-  "unsupportedZoomHelpMenuLabel": {
-    "message": "Chrome 菜单"
+    "message": "请使用 Chrome 自带缩放："
   },
   "zoomRestoredTitle": {
     "message": "Site Zoom Lock：已恢复到 $zoom$",
@@ -106,5 +88,31 @@
         "content": "$1"
       }
     }
+  },
+  "unsupportedZoomActionZoomInLabel": {
+    "message": "放大"
+  },
+  "unsupportedZoomActionZoomOutLabel": {
+    "message": "缩小"
+  },
+  "unsupportedZoomActionResetLabel": {
+    "message": "恢复"
+  },
+  "unsupportedZoomShortcutStep": {
+    "message": "按住 $modifier$，再按 $key$",
+    "placeholders": {
+      "modifier": {
+        "content": "$1"
+      },
+      "key": {
+        "content": "$2"
+      }
+    }
+  },
+  "keyboardModifierCtrl": {
+    "message": "Ctrl"
+  },
+  "keyboardModifierCommand": {
+    "message": "Command"
   }
 }

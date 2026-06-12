@@ -47,16 +47,7 @@
     "message": "Выберите значение масштаба, поддерживаемое Chrome."
   },
   "unsupportedZoomHelpTitle": {
-    "message": "Используйте масштаб Chrome вручную"
-  },
-  "unsupportedZoomHelpWindows": {
-    "message": "Удерживайте Ctrl, затем нажмите плюс, минус или 0"
-  },
-  "unsupportedZoomHelpMac": {
-    "message": "Удерживайте Command, затем нажмите плюс, минус или 0"
-  },
-  "unsupportedZoomHelpMenu": {
-    "message": "Откройте меню справа вверху и используйте Масштаб"
+    "message": "Требуется ручной масштаб"
   },
   "currentZoomLabel": {
     "message": "Текущий масштаб"
@@ -88,16 +79,7 @@
     "message": "Нельзя управлять"
   },
   "unsupportedZoomHelpBody": {
-    "message": "Chrome не разрешает расширениям управлять масштабом этой страницы."
-  },
-  "unsupportedZoomHelpWindowsLabel": {
-    "message": "Windows / Linux"
-  },
-  "unsupportedZoomHelpMacLabel": {
-    "message": "Mac"
-  },
-  "unsupportedZoomHelpMenuLabel": {
-    "message": "Меню Chrome"
+    "message": "Используйте встроенный масштаб Chrome:"
   },
   "zoomRestoredTitle": {
     "message": "Site Zoom Lock: restored to $zoom$",
@@ -106,5 +88,31 @@
         "content": "$1"
       }
     }
+  },
+  "unsupportedZoomActionZoomInLabel": {
+    "message": "Увеличить"
+  },
+  "unsupportedZoomActionZoomOutLabel": {
+    "message": "Уменьшить"
+  },
+  "unsupportedZoomActionResetLabel": {
+    "message": "Сброс"
+  },
+  "unsupportedZoomShortcutStep": {
+    "message": "Удерживайте $modifier$, затем нажмите $key$",
+    "placeholders": {
+      "modifier": {
+        "content": "$1"
+      },
+      "key": {
+        "content": "$2"
+      }
+    }
+  },
+  "keyboardModifierCtrl": {
+    "message": "Ctrl"
+  },
+  "keyboardModifierCommand": {
+    "message": "Command"
   }
 }
