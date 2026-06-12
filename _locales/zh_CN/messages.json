@@ -46,6 +46,18 @@
   "zoomRangeText": {
     "message": "请选择 Chrome 支持的缩放档位。"
   },
+  "unsupportedZoomHelpTitle": {
+    "message": "此页面只能手动缩放"
+  },
+  "unsupportedZoomHelpWindows": {
+    "message": "按住 Ctrl，再按加号键、减号键或 0"
+  },
+  "unsupportedZoomHelpMac": {
+    "message": "按住 Command，再按加号键、减号键或 0"
+  },
+  "unsupportedZoomHelpMenu": {
+    "message": "打开右上角菜单，再使用“缩放”"
+  },
   "currentZoomLabel": {
     "message": "当前缩放"
   },
@@ -71,5 +83,20 @@
         "content": "$1"
       }
     }
+  },
+  "unsupportedBadge": {
+    "message": "不可控制"
+  },
+  "unsupportedZoomHelpBody": {
+    "message": "Chrome 不允许扩展控制这个页面的缩放。"
+  },
+  "unsupportedZoomHelpWindowsLabel": {
+    "message": "Windows / Linux"
+  },
+  "unsupportedZoomHelpMacLabel": {
+    "message": "Mac"
+  },
+  "unsupportedZoomHelpMenuLabel": {
+    "message": "Chrome 菜单"
   }
 }

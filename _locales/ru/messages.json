@@ -46,6 +46,18 @@
   "zoomRangeText": {
     "message": "Выберите значение масштаба, поддерживаемое Chrome."
   },
+  "unsupportedZoomHelpTitle": {
+    "message": "Используйте масштаб Chrome вручную"
+  },
+  "unsupportedZoomHelpWindows": {
+    "message": "Удерживайте Ctrl, затем нажмите плюс, минус или 0"
+  },
+  "unsupportedZoomHelpMac": {
+    "message": "Удерживайте Command, затем нажмите плюс, минус или 0"
+  },
+  "unsupportedZoomHelpMenu": {
+    "message": "Откройте меню справа вверху и используйте Масштаб"
+  },
   "currentZoomLabel": {
     "message": "Текущий масштаб"
   },
@@ -71,5 +83,20 @@
         "content": "$1"
       }
     }
+  },
+  "unsupportedBadge": {
+    "message": "Нельзя управлять"
+  },
+  "unsupportedZoomHelpBody": {
+    "message": "Chrome не разрешает расширениям управлять масштабом этой страницы."
+  },
+  "unsupportedZoomHelpWindowsLabel": {
+    "message": "Windows / Linux"
+  },
+  "unsupportedZoomHelpMacLabel": {
+    "message": "Mac"
+  },
+  "unsupportedZoomHelpMenuLabel": {
+    "message": "Меню Chrome"
   }
 }

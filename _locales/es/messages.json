@@ -46,6 +46,18 @@
   "zoomRangeText": {
     "message": "Elige un valor de zoom compatible con Chrome."
   },
+  "unsupportedZoomHelpTitle": {
+    "message": "Usa el zoom de Chrome manualmente"
+  },
+  "unsupportedZoomHelpWindows": {
+    "message": "Mantén Ctrl y pulsa la tecla Más, Menos o 0"
+  },
+  "unsupportedZoomHelpMac": {
+    "message": "Mantén Command y pulsa la tecla Más, Menos o 0"
+  },
+  "unsupportedZoomHelpMenu": {
+    "message": "Abre el menú superior derecho y usa Zoom"
+  },
   "currentZoomLabel": {
     "message": "Zoom actual"
   },
@@ -71,5 +83,20 @@
         "content": "$1"
       }
     }
+  },
+  "unsupportedBadge": {
+    "message": "No controlable"
+  },
+  "unsupportedZoomHelpBody": {
+    "message": "Chrome no permite que las extensiones controlen el zoom de esta página."
+  },
+  "unsupportedZoomHelpWindowsLabel": {
+    "message": "Windows / Linux"
+  },
+  "unsupportedZoomHelpMacLabel": {
+    "message": "Mac"
+  },
+  "unsupportedZoomHelpMenuLabel": {
+    "message": "Menú de Chrome"
   }
 }

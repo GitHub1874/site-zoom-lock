@@ -2,7 +2,11 @@ const statusText = document.getElementById('statusText');
 const inlineZoomValue = document.getElementById('inlineZoomValue');
 const siteValue = document.getElementById('siteValue');
 const siteToggle = document.getElementById('siteToggle');
+const siteSwitch = document.getElementById('siteSwitch');
+const siteStateBadge = document.getElementById('siteStateBadge');
 const zoomSelect = document.getElementById('zoomSelect');
+const pageRule = document.getElementById('pageRule');
+const unsupportedHelp = document.getElementById('unsupportedHelp');
 const liveStatus = document.getElementById('liveStatus');
 
 const MIN_ZOOM_PERCENT = 25;
@@ -158,6 +162,10 @@ function render(state) {
   inlineZoomValue.title = inlineZoomValue.textContent;
   siteValue.textContent = formatSiteLabel(state.siteInfo);
   siteValue.title = formatSiteLabel(state.siteInfo);
+  siteSwitch.hidden = unsupported;
+  siteStateBadge.hidden = !unsupported;
+  pageRule.hidden = unsupported;
+  unsupportedHelp.hidden = !unsupported;
 
   if (unsupported) {
     statusText.textContent = t('statusUnsupported');

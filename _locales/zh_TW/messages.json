@@ -46,6 +46,18 @@
   "zoomRangeText": {
     "message": "請選擇 Chrome 支援的縮放級別。"
   },
+  "unsupportedZoomHelpTitle": {
+    "message": "此頁面只能手動縮放"
+  },
+  "unsupportedZoomHelpWindows": {
+    "message": "按住 Ctrl，再按加號鍵、減號鍵或 0"
+  },
+  "unsupportedZoomHelpMac": {
+    "message": "按住 Command，再按加號鍵、減號鍵或 0"
+  },
+  "unsupportedZoomHelpMenu": {
+    "message": "打開右上角選單，再使用「縮放」"
+  },
   "currentZoomLabel": {
     "message": "目前縮放"
   },
@@ -71,5 +83,20 @@
         "content": "$1"
       }
     }
+  },
+  "unsupportedBadge": {
+    "message": "無法控制"
+  },
+  "unsupportedZoomHelpBody": {
+    "message": "Chrome 不允許擴充功能控制這個頁面的縮放。"
+  },
+  "unsupportedZoomHelpWindowsLabel": {
+    "message": "Windows / Linux"
+  },
+  "unsupportedZoomHelpMacLabel": {
+    "message": "Mac"
+  },
+  "unsupportedZoomHelpMenuLabel": {
+    "message": "Chrome 選單"
   }
 }

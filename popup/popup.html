@@ -22,16 +22,17 @@
             <p class="rule-title" data-i18n="thisWebsiteLabel">This website:</p>
             <p id="siteValue" class="rule-value">--</p>
           </div>
-          <label class="switch" for="siteToggle">
+          <label id="siteSwitch" class="switch" for="siteToggle">
             <input id="siteToggle" type="checkbox" aria-describedby="statusText">
             <span class="track" aria-hidden="true">
               <span class="thumb"></span>
             </span>
             <span class="sr-only" data-i18n="siteSwitchLabel">Enable zoom lock for this website</span>
           </label>
+          <span id="siteStateBadge" class="state-badge" data-i18n="unsupportedBadge" hidden>Cannot control</span>
         </div>
 
-        <div class="rule-row page-rule">
+        <div id="pageRule" class="rule-row page-rule">
           <div class="rule-copy">
             <p class="rule-title" data-i18n="currentZoomLabel">Current zoom</p>
             <p id="inlineZoomValue" class="rule-value">--</p>
@@ -45,6 +46,24 @@
         </div>
       </section>
 
+      <aside id="unsupportedHelp" class="unsupported-help" role="note" aria-labelledby="unsupportedHelpTitle" hidden>
+        <p id="unsupportedHelpTitle" class="unsupported-help-title" data-i18n="unsupportedZoomHelpTitle">Use Chrome zoom manually</p>
+        <p class="unsupported-help-copy" data-i18n="unsupportedZoomHelpBody">Chrome does not allow extensions to control this page.</p>
+        <div class="shortcut-list">
+          <div class="shortcut-row">
+            <span class="shortcut-label" data-i18n="unsupportedZoomHelpWindowsLabel">Windows / Linux</span>
+            <span class="shortcut-text" data-i18n="unsupportedZoomHelpWindows">Hold Ctrl, then press +, -, or 0</span>
+          </div>
+          <div class="shortcut-row">
+            <span class="shortcut-label" data-i18n="unsupportedZoomHelpMacLabel">Mac</span>
+            <span class="shortcut-text" data-i18n="unsupportedZoomHelpMac">Hold Command, then press +, -, or 0</span>
+          </div>
+          <div class="shortcut-row">
+            <span class="shortcut-label" data-i18n="unsupportedZoomHelpMenuLabel">Chrome menu</span>
+            <span class="shortcut-text" data-i18n="unsupportedZoomHelpMenu">Open the top-right menu, then use Zoom</span>
+          </div>
+        </div>
+      </aside>
       <p id="zoomRangeText" class="sr-only" data-i18n="zoomRangeText">Choose a supported Chrome zoom value.</p>
       <p id="liveStatus" class="sr-only" role="status" aria-live="polite"></p>
     </main>
