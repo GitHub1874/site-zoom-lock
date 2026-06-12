@@ -78,16 +78,42 @@ function setZoomSettings(tabId, zoomSettings) {
   return callChrome((callback) => chrome.tabs.setZoomSettings(tabId, zoomSettings, callback));
 }
 
+function callChromeOptional(fn) {
+  return new Promise((resolve) => {
+    let settled = false;
+    const finish = () => {
+      if (!settled) {
+        settled = true;
+        resolve();
+      }
+    };
+
+    try {
+      const maybePromise = fn(() => {
+        void chrome.runtime.lastError;
+        finish();
+      });
+      if (maybePromise && typeof maybePromise.then === 'function') {
+        maybePromise.then(finish, finish);
+      } else {
+        setTimeout(finish, 0);
+      }
+    } catch {
+      finish();
+    }
+  });
+}
+
 function actionSetBadgeText(tabId, text) {
-  return callChrome((callback) => chrome.action.setBadgeText({ tabId, text }, callback));
+  return callChromeOptional((callback) => chrome.action.setBadgeText({ tabId, text }, callback));
 }
 
 function actionSetBadgeBackgroundColor(tabId, color) {
-  return callChrome((callback) => chrome.action.setBadgeBackgroundColor({ tabId, color }, callback));
+  return callChromeOptional((callback) => chrome.action.setBadgeBackgroundColor({ tabId, color }, callback));
 }
 
 function actionSetTitle(tabId, title) {
-  return callChrome((callback) => chrome.action.setTitle({ tabId, title }, callback));
+  return callChromeOptional((callback) => chrome.action.setTitle({ tabId, title }, callback));
 }
 
 function normalizeHostname(hostname) {
@@ -346,88 +372,6 @@ function upsertSiteRule(settings, siteInfo, patch) {
   }
 
   return settings.siteRules[siteInfo.key];
-}
-
-function siteLabelFromRule(key, rule) {
-  if (rule.label) {
-    return rule.label;
-  }
-
-  if (key === 'scheme:file') {
-    return 'Local files';
-  }
-
-  if (key.startsWith('site:')) {
-    return key.slice(5);
-  }
-
-  return key;
-}
-
-function getManageableRules(settings) {
-  return Object.entries(settings.siteRules)
-    .map(([key, rule]) => {
-      const normalized = normalizeSiteRule(rule);
-      if (settings.disabledSites[key]) {
-        normalized.enabled = false;
-      }
-
-      return {
-        key,
-        label: siteLabelFromRule(key, normalized),
-        enabled: normalized.enabled,
-        zoomPercent: normalized.zoomPercent,
-        updatedAt: normalized.updatedAt
-      };
-    })
-    .sort((a, b) => a.label.localeCompare(b.label, undefined, { sensitivity: 'base' }));
-}
-
-async function getManageSitesState() {
-  const settings = await readSettings();
-  return {
-    rules: getManageableRules(settings)
-  };
-}
-
-async function updateManagedSiteRule(key, patch) {
-  const settings = await readSettings();
-  const current = settings.siteRules[key];
-
-  if (!current) {
-    return getManageSitesState();
-  }
-
-  const nextRule = normalizeSiteRule({
-    ...current,
-    ...patch,
-    updatedAt: new Date().toISOString()
-  });
-  settings.siteRules[key] = nextRule;
-
-  if (Object.prototype.hasOwnProperty.call(patch, 'enabled')) {
-    if (patch.enabled === false) {
-      settings.disabledSites[key] = {
-        label: siteLabelFromRule(key, nextRule),
-        updatedAt: new Date().toISOString()
-      };
-    } else {
-      delete settings.disabledSites[key];
-    }
-  }
-
-  await writeSettings(settings);
-  await enforceAllTabs('managed-site-rule-updated');
-  return getManageSitesState();
-}
-
-async function deleteManagedSiteRule(key) {
-  const settings = await readSettings();
-  delete settings.siteRules[key];
-  delete settings.disabledSites[key];
-  await writeSettings(settings);
-  await enforceAllTabs('managed-site-rule-deleted');
-  return getManageSitesState();
 }
 
 function formatZoomPercent(zoomPercent) {
@@ -770,20 +714,6 @@ chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
         return setCurrentSiteEnabled(!message.ignored);
       case 'reset-current-tab':
         return resetCurrentTabNow();
-      case 'get-manage-sites-state':
-        return getManageSitesState();
-      case 'update-managed-site-rule': {
-        const patch = {};
-        if (Object.prototype.hasOwnProperty.call(message, 'enabled')) {
-          patch.enabled = message.enabled;
-        }
-        if (Object.prototype.hasOwnProperty.call(message, 'zoomPercent')) {
-          patch.zoomPercent = message.zoomPercent;
-        }
-        return updateManagedSiteRule(message.key, patch);
-      }
-      case 'delete-managed-site-rule':
-        return deleteManagedSiteRule(message.key);
       default:
         return {
           error: 'Unknown message'

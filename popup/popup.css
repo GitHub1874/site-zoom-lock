@@ -331,25 +331,6 @@ h1 {
   overflow-wrap: anywhere;
 }
 
-.manage-sites-button {
-  justify-self: start;
-  border: 0;
-  border-radius: 6px;
-  background: transparent;
-  color: var(--primary);
-  font-size: 13px;
-  font-weight: 800;
-  line-height: 1.2;
-  padding: 2px 0;
-  cursor: pointer;
-}
-
-.manage-sites-button:hover {
-  color: var(--primary-strong);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
 button:disabled,
 input:disabled,
 select:disabled,

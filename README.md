@@ -11,7 +11,6 @@ It is especially useful for browser-based engineering, design, and productivity 
 - Set a target Chrome page zoom level for each website.
 - Automatically restore the target zoom when entering a site, refreshing, switching tabs, opening subpages, or changing browser zoom.
 - Enable or disable zoom locking for the current website.
-- Manage all saved website rules from a dedicated options page.
 - Store all zoom rules locally with `chrome.storage.local`.
 - Support Chrome-native zoom levels such as 90%, 100%, 110%, 125%, and 150%.
 - Automatically display the popup UI in supported browser languages.
@@ -64,7 +63,6 @@ Site Zoom Lock 是一个 Chrome 扩展，用来让每个网站保持在用户设
 - 为每个网站设置一个目标 Chrome 页面缩放比例。
 - 在进入网站、刷新页面、切换标签页、打开二级页面或改变浏览器缩放时，自动恢复目标缩放。
 - 可以为当前网站开启或关闭缩放锁定。
-- 可以在独立管理页查看、修改或删除所有已保存的网站规则。
 - 所有缩放规则都通过 `chrome.storage.local` 保存在本地。
 - 支持 Chrome 原生缩放档位，例如 90%、100%、110%、125%、150%。
 - 弹窗界面会根据支持的浏览器语言自动切换显示语言。
