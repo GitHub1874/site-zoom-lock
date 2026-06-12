@@ -6,7 +6,7 @@
     "message": "Zoom Lock"
   },
   "extDescription": {
-    "message": "Keep each website at your preferred Chrome zoom level."
+    "message": "Lock website zoom to your chosen level."
   },
   "popupHeading": {
     "message": "Site Zoom Lock"
@@ -53,7 +53,7 @@
     "message": "No active page"
   },
   "siteUnsupported": {
-    "message": "Unsupported page"
+    "message": "This page cannot be controlled"
   },
   "siteLocalFiles": {
     "message": "Local files"

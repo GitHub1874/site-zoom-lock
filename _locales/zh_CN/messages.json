@@ -6,7 +6,7 @@
     "message": "Zoom Lock"
   },
   "extDescription": {
-    "message": "按网站锁定 Chrome 网页缩放，并支持自定义目标缩放值。"
+    "message": "Lock website zoom to your chosen level. 按网站锁定 Chrome 网页缩放。"
   },
   "popupHeading": {
     "message": "Site Zoom Lock"
@@ -53,7 +53,7 @@
     "message": "没有活动页面"
   },
   "siteUnsupported": {
-    "message": "不支持的页面"
+    "message": "当前页面不可控制"
   },
   "siteLocalFiles": {
     "message": "本地文件"

@@ -90,6 +90,11 @@ function normalizeHostname(hostname) {
   return hostname.toLowerCase().replace(/^www\./, '');
 }
 
+function isChromeWebStoreUrl(parsed) {
+  const hostname = normalizeHostname(parsed.hostname);
+  return hostname === 'chromewebstore.google.com' || (hostname === 'chrome.google.com' && parsed.pathname.startsWith('/webstore'));
+}
+
 function getSiteInfo(url) {
   if (!url) {
     return {
@@ -109,6 +114,17 @@ function getSiteInfo(url) {
       key: '',
       label: 'Unsupported page',
       reason: 'bad-url'
+    };
+  }
+
+  if ((parsed.protocol === 'http:' || parsed.protocol === 'https:') && isChromeWebStoreUrl(parsed)) {
+    return {
+      supported: false,
+      key: '',
+      label: 'Chrome Web Store',
+      protocol: parsed.protocol,
+      reason: 'chrome-web-store',
+      url
     };
   }
 
@@ -525,10 +541,12 @@ async function buildPopupState() {
   let zoom = null;
   let canControl = siteInfo.supported;
 
-  try {
-    zoom = await getZoom(tab.id);
-  } catch {
-    canControl = false;
+  if (siteInfo.supported) {
+    try {
+      zoom = await getZoom(tab.id);
+    } catch {
+      canControl = false;
+    }
   }
 
   return {

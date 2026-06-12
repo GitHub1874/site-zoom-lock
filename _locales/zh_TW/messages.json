@@ -6,7 +6,7 @@
     "message": "Zoom Lock"
   },
   "extDescription": {
-    "message": "按網站鎖定 Chrome 網頁縮放，並支援自訂目標縮放值。"
+    "message": "Lock website zoom to your chosen level. 按網站鎖定 Chrome 網頁縮放。"
   },
   "popupHeading": {
     "message": "Site Zoom Lock"
@@ -53,7 +53,7 @@
     "message": "沒有作用中的頁面"
   },
   "siteUnsupported": {
-    "message": "不支援的頁面"
+    "message": "目前頁面無法控制"
   },
   "siteLocalFiles": {
     "message": "本機檔案"

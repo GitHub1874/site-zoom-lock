@@ -152,7 +152,7 @@ function render(state) {
   const zoomPercent = clampZoomPercent(state.siteRule?.zoomPercent ?? DEFAULT_ZOOM_PERCENT);
   const unsupported = !state.canControl;
 
-  siteToggle.checked = siteEnabled;
+  siteToggle.checked = !unsupported && siteEnabled;
   zoomSelect.value = String(zoomPercent);
   inlineZoomValue.textContent = formatZoom(state.zoom);
   inlineZoomValue.title = inlineZoomValue.textContent;
