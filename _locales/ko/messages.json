@@ -98,5 +98,89 @@
   },
   "unsupportedZoomHelpMenuLabel": {
     "message": "Chrome 메뉴"
+  },
+  "manageSitesButton": {
+    "message": "Manage sites"
+  },
+  "managePageTitle": {
+    "message": "Manage sites - Site Zoom Lock"
+  },
+  "manageEyebrow": {
+    "message": "Site Zoom Lock"
+  },
+  "manageHeading": {
+    "message": "Manage sites"
+  },
+  "manageLead": {
+    "message": "Review saved website zoom rules, adjust target zoom, or remove rules you no longer need."
+  },
+  "manageSummaryAria": {
+    "message": "Rule summary"
+  },
+  "manageLoading": {
+    "message": "Loading rules..."
+  },
+  "manageSummary": {
+    "message": "$count$ saved website rules",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "manageEmptyTitle": {
+    "message": "No saved websites yet"
+  },
+  "manageEmptyBody": {
+    "message": "Open a website, choose a target zoom in the popup, and it will appear here."
+  },
+  "manageTableAria": {
+    "message": "Saved site zoom rules"
+  },
+  "manageSiteColumn": {
+    "message": "Website"
+  },
+  "manageZoomColumn": {
+    "message": "Target zoom"
+  },
+  "manageStatusColumn": {
+    "message": "Status"
+  },
+  "manageUpdatedColumn": {
+    "message": "Updated"
+  },
+  "manageActionsColumn": {
+    "message": "Actions"
+  },
+  "manageStatusOn": {
+    "message": "On"
+  },
+  "manageStatusOff": {
+    "message": "Off"
+  },
+  "manageDeleteButton": {
+    "message": "Delete"
+  },
+  "manageSavedStatus": {
+    "message": "Saved"
+  },
+  "manageDeletedStatus": {
+    "message": "Deleted"
+  },
+  "manageDeleteConfirm": {
+    "message": "Delete the zoom rule for $site$?",
+    "placeholders": {
+      "site": {
+        "content": "$1"
+      }
+    }
+  },
+  "zoomRestoredTitle": {
+    "message": "Site Zoom Lock: restored to $zoom$",
+    "placeholders": {
+      "zoom": {
+        "content": "$1"
+      }
+    }
   }
 }

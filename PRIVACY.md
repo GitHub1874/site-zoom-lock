@@ -18,6 +18,8 @@ The extension stores these settings locally in the user's browser:
 - The target Chrome page zoom percentage for that website.
 - Whether zoom locking is enabled or disabled for that website.
 
+Users can review, edit, or delete saved website rules from the extension's options page.
+
 ### How Data Is Stored
 
 All settings are stored locally with `chrome.storage.local` in the user's browser.
@@ -38,7 +40,7 @@ Site Zoom Lock does not require an account or login.
 
 ### Website Content
 
-Site Zoom Lock does not read, collect, or modify webpage content. It only uses the tab URL/domain and Chrome's zoom APIs to apply the user's selected page zoom.
+Site Zoom Lock does not read, collect, or modify webpage content. It only uses the tab URL/domain, Chrome's zoom APIs, and extension UI feedback such as badge text or popup/options pages to apply and show the user's selected page zoom.
 
 ### Contact
 
@@ -60,6 +62,8 @@ Site Zoom Lock 只使用当前标签页的 URL 或域名，用来把当前网站
 - 该网站的目标 Chrome 页面缩放比例。
 - 该网站是否开启或关闭缩放锁定。
 
+用户可以在扩展的管理页查看、修改或删除已保存的网站规则。
+
 ### 数据如何存储
 
 所有设置都通过 `chrome.storage.local` 保存在用户自己的浏览器本地。
@@ -80,7 +84,7 @@ Site Zoom Lock 不需要账号或登录。
 
 ### 网页内容
 
-Site Zoom Lock 不读取、收集或修改网页内容。它只使用标签页 URL 或域名，以及 Chrome 的缩放 API 来应用用户选择的页面缩放比例。
+Site Zoom Lock 不读取、收集或修改网页内容。它只使用标签页 URL 或域名、Chrome 的缩放 API，以及扩展自身的徽标文字、弹窗和管理页等界面反馈来应用和显示用户选择的页面缩放比例。
 
 ### 联系方式
 

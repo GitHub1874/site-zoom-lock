@@ -11,6 +11,7 @@ It is especially useful for browser-based engineering, design, and productivity 
 - Set a target Chrome page zoom level for each website.
 - Automatically restore the target zoom when entering a site, refreshing, switching tabs, opening subpages, or changing browser zoom.
 - Enable or disable zoom locking for the current website.
+- Manage all saved website rules from a dedicated options page.
 - Store all zoom rules locally with `chrome.storage.local`.
 - Support Chrome-native zoom levels such as 90%, 100%, 110%, 125%, and 150%.
 - Automatically display the popup UI in supported browser languages.
@@ -18,6 +19,12 @@ It is especially useful for browser-based engineering, design, and productivity 
 ### Important Note
 
 Site Zoom Lock controls Chrome page zoom. It does not control the internal canvas zoom of apps such as Figma, Stitch, design tools, or editors.
+
+### Common Use Cases
+
+- Figma, Stitch, and similar canvas tools where Ctrl + Mouse Wheel controls the canvas instead of Chrome page zoom.
+- Web IDEs, admin consoles, dashboards, and documentation systems where browser zoom drift makes panels, tables, or editors feel inconsistent.
+- Engineering and design workflows where Chrome page zoom needs to stay fixed while the web app handles its own internal zoom.
 
 ### Privacy
 
@@ -57,6 +64,7 @@ Site Zoom Lock 是一个 Chrome 扩展，用来让每个网站保持在用户设
 - 为每个网站设置一个目标 Chrome 页面缩放比例。
 - 在进入网站、刷新页面、切换标签页、打开二级页面或改变浏览器缩放时，自动恢复目标缩放。
 - 可以为当前网站开启或关闭缩放锁定。
+- 可以在独立管理页查看、修改或删除所有已保存的网站规则。
 - 所有缩放规则都通过 `chrome.storage.local` 保存在本地。
 - 支持 Chrome 原生缩放档位，例如 90%、100%、110%、125%、150%。
 - 弹窗界面会根据支持的浏览器语言自动切换显示语言。
@@ -64,6 +72,12 @@ Site Zoom Lock 是一个 Chrome 扩展，用来让每个网站保持在用户设
 ### 重要说明
 
 Site Zoom Lock 控制的是 Chrome 页面缩放，不控制 Figma、Stitch、设计工具或编辑器内部的画布缩放。
+
+### 常见使用场景
+
+- Figma、Stitch 等画布工具中，Ctrl + 鼠标滚轮经常控制画布，而不是 Chrome 页面缩放。
+- Web IDE、后台系统、数据仪表盘和文档系统中，浏览器页面缩放漂移会让面板、表格或编辑器显示不一致。
+- 工程和设计工作流中，需要固定 Chrome 页面缩放，同时让网页应用自己处理内部缩放。
 
 ### 隐私
 

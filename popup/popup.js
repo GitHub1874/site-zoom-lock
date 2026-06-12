@@ -9,6 +9,7 @@ const pageRule = document.getElementById('pageRule');
 const unsupportedHelp = document.getElementById('unsupportedHelp');
 const windowsShortcutRow = document.getElementById('windowsShortcutRow');
 const macShortcutRow = document.getElementById('macShortcutRow');
+const manageSitesButton = document.getElementById('manageSitesButton');
 const liveStatus = document.getElementById('liveStatus');
 
 const MIN_ZOOM_PERCENT = 25;
@@ -274,6 +275,10 @@ zoomSelect.addEventListener('change', () => {
     },
     t('zoomSavedSuccess', `${zoomPercent}%`)
   );
+});
+
+manageSitesButton.addEventListener('click', () => {
+  chrome.runtime.openOptionsPage();
 });
 
 applyStaticI18n();

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title data-i18n="managePageTitle">Manage sites - Site Zoom Lock</title>
+    <link rel="stylesheet" href="options.css">
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="page-header">
+        <div>
+          <p class="eyebrow" data-i18n="manageEyebrow">Site Zoom Lock</p>
+          <h1 data-i18n="manageHeading">Manage sites</h1>
+          <p class="lead" data-i18n="manageLead">Review saved website zoom rules, adjust target zoom, or remove rules you no longer need.</p>
+        </div>
+      </header>
+
+      <section class="toolbar" aria-label="Rule summary" data-i18n-aria-label="manageSummaryAria">
+        <p id="summaryText" class="summary-text" data-i18n="manageLoading">Loading rules...</p>
+      </section>
+
+      <section id="emptyState" class="empty-state" hidden>
+        <h2 data-i18n="manageEmptyTitle">No saved websites yet</h2>
+        <p data-i18n="manageEmptyBody">Open a website, choose a target zoom in the popup, and it will appear here.</p>
+      </section>
+
+      <section class="rules-table-wrap" aria-label="Saved site zoom rules" data-i18n-aria-label="manageTableAria">
+        <table class="rules-table">
+          <thead>
+            <tr>
+              <th scope="col" data-i18n="manageSiteColumn">Website</th>
+              <th scope="col" data-i18n="manageZoomColumn">Target zoom</th>
+              <th scope="col" data-i18n="manageStatusColumn">Status</th>
+              <th scope="col" data-i18n="manageUpdatedColumn">Updated</th>
+              <th scope="col" data-i18n="manageActionsColumn">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="rulesBody"></tbody>
+        </table>
+      </section>
+
+      <p id="liveStatus" class="sr-only" role="status" aria-live="polite"></p>
+    </main>
+    <script src="options.js"></script>
+  </body>
+</html>

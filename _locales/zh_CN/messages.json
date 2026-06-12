@@ -98,5 +98,89 @@
   },
   "unsupportedZoomHelpMenuLabel": {
     "message": "Chrome 菜单"
+  },
+  "manageSitesButton": {
+    "message": "管理网站"
+  },
+  "managePageTitle": {
+    "message": "管理网站 - Site Zoom Lock"
+  },
+  "manageEyebrow": {
+    "message": "Site Zoom Lock"
+  },
+  "manageHeading": {
+    "message": "管理网站"
+  },
+  "manageLead": {
+    "message": "查看已保存的网站缩放规则，调整目标缩放，或删除不再需要的规则。"
+  },
+  "manageSummaryAria": {
+    "message": "规则摘要"
+  },
+  "manageLoading": {
+    "message": "正在加载规则..."
+  },
+  "manageSummary": {
+    "message": "已保存 $count$ 条网站规则",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "manageEmptyTitle": {
+    "message": "还没有保存的网站"
+  },
+  "manageEmptyBody": {
+    "message": "打开一个网站，在弹窗里选择目标缩放后，它会出现在这里。"
+  },
+  "manageTableAria": {
+    "message": "已保存的网站缩放规则"
+  },
+  "manageSiteColumn": {
+    "message": "网站"
+  },
+  "manageZoomColumn": {
+    "message": "目标缩放"
+  },
+  "manageStatusColumn": {
+    "message": "状态"
+  },
+  "manageUpdatedColumn": {
+    "message": "更新时间"
+  },
+  "manageActionsColumn": {
+    "message": "操作"
+  },
+  "manageStatusOn": {
+    "message": "开启"
+  },
+  "manageStatusOff": {
+    "message": "关闭"
+  },
+  "manageDeleteButton": {
+    "message": "删除"
+  },
+  "manageSavedStatus": {
+    "message": "已保存"
+  },
+  "manageDeletedStatus": {
+    "message": "已删除"
+  },
+  "manageDeleteConfirm": {
+    "message": "删除 $site$ 的缩放规则吗？",
+    "placeholders": {
+      "site": {
+        "content": "$1"
+      }
+    }
+  },
+  "zoomRestoredTitle": {
+    "message": "Site Zoom Lock：已恢复到 $zoom$",
+    "placeholders": {
+      "zoom": {
+        "content": "$1"
+      }
+    }
   }
 }

@@ -33,7 +33,7 @@ const BADGES = {
   unsupported: { text: '', color: '#6b7280' }
 };
 const LOCKED_BADGE = { text: '', color: '#2f6f34' };
-const FEEDBACK_BADGE_MS = 1400;
+const FEEDBACK_BADGE_MS = 2200;
 
 const badgeFeedbackTimers = new Map();
 
@@ -84,6 +84,10 @@ function actionSetBadgeText(tabId, text) {
 
 function actionSetBadgeBackgroundColor(tabId, color) {
   return callChrome((callback) => chrome.action.setBadgeBackgroundColor({ tabId, color }, callback));
+}
+
+function actionSetTitle(tabId, title) {
+  return callChrome((callback) => chrome.action.setTitle({ tabId, title }, callback));
 }
 
 function normalizeHostname(hostname) {
@@ -344,8 +348,94 @@ function upsertSiteRule(settings, siteInfo, patch) {
   return settings.siteRules[siteInfo.key];
 }
 
+function siteLabelFromRule(key, rule) {
+  if (rule.label) {
+    return rule.label;
+  }
+
+  if (key === 'scheme:file') {
+    return 'Local files';
+  }
+
+  if (key.startsWith('site:')) {
+    return key.slice(5);
+  }
+
+  return key;
+}
+
+function getManageableRules(settings) {
+  return Object.entries(settings.siteRules)
+    .map(([key, rule]) => {
+      const normalized = normalizeSiteRule(rule);
+      if (settings.disabledSites[key]) {
+        normalized.enabled = false;
+      }
+
+      return {
+        key,
+        label: siteLabelFromRule(key, normalized),
+        enabled: normalized.enabled,
+        zoomPercent: normalized.zoomPercent,
+        updatedAt: normalized.updatedAt
+      };
+    })
+    .sort((a, b) => a.label.localeCompare(b.label, undefined, { sensitivity: 'base' }));
+}
+
+async function getManageSitesState() {
+  const settings = await readSettings();
+  return {
+    rules: getManageableRules(settings)
+  };
+}
+
+async function updateManagedSiteRule(key, patch) {
+  const settings = await readSettings();
+  const current = settings.siteRules[key];
+
+  if (!current) {
+    return getManageSitesState();
+  }
+
+  const nextRule = normalizeSiteRule({
+    ...current,
+    ...patch,
+    updatedAt: new Date().toISOString()
+  });
+  settings.siteRules[key] = nextRule;
+
+  if (Object.prototype.hasOwnProperty.call(patch, 'enabled')) {
+    if (patch.enabled === false) {
+      settings.disabledSites[key] = {
+        label: siteLabelFromRule(key, nextRule),
+        updatedAt: new Date().toISOString()
+      };
+    } else {
+      delete settings.disabledSites[key];
+    }
+  }
+
+  await writeSettings(settings);
+  await enforceAllTabs('managed-site-rule-updated');
+  return getManageSitesState();
+}
+
+async function deleteManagedSiteRule(key) {
+  const settings = await readSettings();
+  delete settings.siteRules[key];
+  delete settings.disabledSites[key];
+  await writeSettings(settings);
+  await enforceAllTabs('managed-site-rule-deleted');
+  return getManageSitesState();
+}
+
 function formatZoomPercent(zoomPercent) {
   return `${clampZoomPercent(zoomPercent)}%`;
+}
+
+function t(key, substitutions) {
+  return chrome.i18n.getMessage(key, substitutions) || key;
 }
 
 function clearBadgeFeedback(tabId) {
@@ -369,9 +459,22 @@ async function applyBadge(tabId, badge) {
   }
 }
 
+async function setActionTitle(tabId, title) {
+  if (typeof tabId !== 'number' || tabId < 0) {
+    return;
+  }
+
+  try {
+    await actionSetTitle(tabId, title);
+  } catch {
+    // Title updates are cosmetic; enforcement should not fail because of them.
+  }
+}
+
 async function setBadge(tabId, badge) {
   clearBadgeFeedback(tabId);
   await applyBadge(tabId, badge);
+  await setActionTitle(tabId, t('extName'));
 }
 
 async function setLockedBadge(tabId, options = {}) {
@@ -383,11 +486,13 @@ async function setLockedBadge(tabId, options = {}) {
 }
 
 async function showZoomCorrectionFeedback(tabId, zoomPercent) {
+  const zoomLabel = formatZoomPercent(zoomPercent);
   clearBadgeFeedback(tabId);
   await applyBadge(tabId, {
-    text: formatZoomPercent(zoomPercent),
+    text: zoomLabel,
     color: '#2f6f34'
   });
+  await setActionTitle(tabId, t('zoomRestoredTitle', zoomLabel));
 
   const timer = setTimeout(() => {
     badgeFeedbackTimers.delete(tabId);
@@ -469,10 +574,10 @@ async function enforceTab(tabId, reason = 'check') {
 
   try {
     const result = await applyTabZoom(tabId, siteRule.zoomPercent);
-    if (result.changed && reason.startsWith('zoom-changed')) {
+    if (result.changed) {
       await showZoomCorrectionFeedback(tabId, siteRule.zoomPercent);
     } else {
-      await setLockedBadge(tabId, { preserveFeedback: reason.startsWith('zoom-changed') });
+      await setLockedBadge(tabId, { preserveFeedback: true });
     }
     return {
       ok: true,
@@ -665,6 +770,20 @@ chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
         return setCurrentSiteEnabled(!message.ignored);
       case 'reset-current-tab':
         return resetCurrentTabNow();
+      case 'get-manage-sites-state':
+        return getManageSitesState();
+      case 'update-managed-site-rule': {
+        const patch = {};
+        if (Object.prototype.hasOwnProperty.call(message, 'enabled')) {
+          patch.enabled = message.enabled;
+        }
+        if (Object.prototype.hasOwnProperty.call(message, 'zoomPercent')) {
+          patch.zoomPercent = message.zoomPercent;
+        }
+        return updateManagedSiteRule(message.key, patch);
+      }
+      case 'delete-managed-site-rule':
+        return deleteManagedSiteRule(message.key);
       default:
         return {
           error: 'Unknown message'
