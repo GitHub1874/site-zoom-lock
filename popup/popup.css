@@ -133,6 +133,12 @@ h1 {
   white-space: nowrap;
 }
 
+.is-unsupported #siteValue {
+  overflow: visible;
+  text-overflow: clip;
+  white-space: normal;
+}
+
 .switch {
   display: inline-flex;
   align-items: center;
@@ -264,11 +270,11 @@ h1 {
 }
 
 .unsupported-help {
-  border: 1px solid var(--border);
+  border: 1px solid #d8e6d1;
   border-radius: 8px;
-  background: #fbfdf8;
+  background: #fbfdf9;
   color: var(--text);
-  padding: 14px 14px 12px;
+  padding: 14px;
 }
 
 .unsupported-help-title {
@@ -282,44 +288,66 @@ h1 {
   margin-top: 6px;
   color: var(--muted);
   font-size: 12px;
-  line-height: 1.4;
+  line-height: 1.45;
+  max-width: 42ch;
+}
+
+.shortcut-panel {
+  margin-top: 12px;
+}
+
+.shortcut-intro {
+  color: #435140;
+  font-size: 12px;
+  font-weight: 750;
+  line-height: 1.35;
 }
 
 .shortcut-list {
   display: grid;
-  gap: 0;
-  margin-top: 10px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 8px;
 }
 
-.shortcut-row {
-  display: grid;
-  grid-template-columns: 54px minmax(0, 1fr);
-  gap: 10px;
+.shortcut-chip {
+  display: flex;
+  min-width: 0;
+  min-height: 56px;
+  flex-direction: column;
   align-items: center;
-  border-top: 1px solid #e3ecde;
-  min-height: 32px;
-  padding: 7px 0;
-}
-
-.shortcut-row:first-child {
-  border-top: 0;
-}
-
-.shortcut-label {
+  justify-content: center;
+  gap: 6px;
+  border: 1px solid #dde8d6;
+  border-radius: 8px;
+  background: #ffffff;
   color: #435140;
-  font-size: 12px;
-  font-weight: 800;
-  line-height: 1.25;
+  font-size: 11px;
+  font-weight: 750;
+  line-height: 1.2;
+  padding: 7px 4px;
+  text-align: center;
 }
 
-.shortcut-text {
-  color: var(--muted);
-  font-size: 12px;
-  line-height: 1.35;
+.shortcut-key {
+  display: inline-flex;
+  min-width: 26px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #cbd8c4;
+  border-bottom-color: #b8c7b0;
+  border-radius: 6px;
+  background: #f8fbf6;
+  box-shadow: 0 1px 0 rgba(23, 32, 24, 0.08);
+  color: #24312a;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 850;
+  line-height: 1;
 }
 
-.shortcut-label,
-.shortcut-text {
+.shortcut-chip span {
   overflow-wrap: anywhere;
 }
 

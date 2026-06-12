@@ -7,9 +7,7 @@ const siteStateBadge = document.getElementById('siteStateBadge');
 const zoomSelect = document.getElementById('zoomSelect');
 const pageRule = document.getElementById('pageRule');
 const unsupportedHelp = document.getElementById('unsupportedHelp');
-const zoomInShortcutText = document.getElementById('zoomInShortcutText');
-const zoomOutShortcutText = document.getElementById('zoomOutShortcutText');
-const resetShortcutText = document.getElementById('resetShortcutText');
+const shortcutIntroText = document.getElementById('shortcutIntroText');
 const liveStatus = document.getElementById('liveStatus');
 
 const MIN_ZOOM_PERCENT = 25;
@@ -109,9 +107,7 @@ async function applyPlatformShortcutHint() {
   const platformInfo = await getPlatformInfo();
   const modifier = platformInfo?.os === 'mac' ? t('keyboardModifierCommand') : t('keyboardModifierCtrl');
 
-  zoomInShortcutText.textContent = t('unsupportedZoomShortcutStep', [modifier, '+']);
-  zoomOutShortcutText.textContent = t('unsupportedZoomShortcutStep', [modifier, '-']);
-  resetShortcutText.textContent = t('unsupportedZoomShortcutStep', [modifier, '0']);
+  shortcutIntroText.textContent = t('unsupportedZoomShortcutIntro', modifier);
 }
 
 function sendMessage(message) {
@@ -192,6 +188,7 @@ function render(state) {
   siteStateBadge.hidden = !unsupported;
   pageRule.hidden = unsupported;
   unsupportedHelp.hidden = !unsupported;
+  document.body.classList.toggle('is-unsupported', unsupported);
 
   if (unsupported) {
     statusText.textContent = t('statusUnsupported');

@@ -49,18 +49,21 @@
       <aside id="unsupportedHelp" class="unsupported-help" role="note" aria-labelledby="unsupportedHelpTitle" hidden>
         <p id="unsupportedHelpTitle" class="unsupported-help-title" data-i18n="unsupportedZoomHelpTitle">Use Chrome zoom manually</p>
         <p class="unsupported-help-copy" data-i18n="unsupportedZoomHelpBody">Chrome does not allow extensions to control this page.</p>
-        <div class="shortcut-list">
-          <div class="shortcut-row">
-            <span class="shortcut-label" data-i18n="unsupportedZoomActionZoomInLabel">Zoom in</span>
-            <span id="zoomInShortcutText" class="shortcut-text">Hold Ctrl, then press +</span>
-          </div>
-          <div class="shortcut-row">
-            <span class="shortcut-label" data-i18n="unsupportedZoomActionZoomOutLabel">Zoom out</span>
-            <span id="zoomOutShortcutText" class="shortcut-text">Hold Ctrl, then press -</span>
-          </div>
-          <div class="shortcut-row">
-            <span class="shortcut-label" data-i18n="unsupportedZoomActionResetLabel">Reset</span>
-            <span id="resetShortcutText" class="shortcut-text">Hold Ctrl, then press 0</span>
+        <div class="shortcut-panel">
+          <p id="shortcutIntroText" class="shortcut-intro">Hold Ctrl, then press:</p>
+          <div class="shortcut-list">
+            <div class="shortcut-chip">
+              <kbd class="shortcut-key">+</kbd>
+              <span data-i18n="unsupportedZoomActionZoomInLabel">Zoom in</span>
+            </div>
+            <div class="shortcut-chip">
+              <kbd class="shortcut-key">-</kbd>
+              <span data-i18n="unsupportedZoomActionZoomOutLabel">Zoom out</span>
+            </div>
+            <div class="shortcut-chip">
+              <kbd class="shortcut-key">0</kbd>
+              <span data-i18n="unsupportedZoomActionResetLabel">Reset</span>
+            </div>
           </div>
         </div>
       </aside>

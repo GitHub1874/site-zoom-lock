@@ -47,7 +47,7 @@
     "message": "Choisissez une valeur de zoom prise en charge par Chrome."
   },
   "unsupportedZoomHelpTitle": {
-    "message": "Zoom manuel requis"
+    "message": "Zoom manuel"
   },
   "currentZoomLabel": {
     "message": "Zoom actuel"
@@ -79,7 +79,7 @@
     "message": "Non contrôlable"
   },
   "unsupportedZoomHelpBody": {
-    "message": "Utilisez le zoom intégré de Chrome :"
+    "message": "Chrome n'autorise pas les extensions à contrôler cette page."
   },
   "zoomRestoredTitle": {
     "message": "Site Zoom Lock: restored to $zoom$",
@@ -96,23 +96,20 @@
     "message": "Réduire"
   },
   "unsupportedZoomActionResetLabel": {
-    "message": "Réinitialiser"
-  },
-  "unsupportedZoomShortcutStep": {
-    "message": "Maintenez $modifier$, puis appuyez sur $key$",
-    "placeholders": {
-      "modifier": {
-        "content": "$1"
-      },
-      "key": {
-        "content": "$2"
-      }
-    }
+    "message": "100%"
   },
   "keyboardModifierCtrl": {
     "message": "Ctrl"
   },
   "keyboardModifierCommand": {
     "message": "Command"
+  },
+  "unsupportedZoomShortcutIntro": {
+    "message": "Maintenez $modifier$, puis appuyez sur :",
+    "placeholders": {
+      "modifier": {
+        "content": "$1"
+      }
+    }
   }
 }

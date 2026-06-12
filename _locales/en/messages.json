@@ -47,7 +47,7 @@
     "message": "Choose one of Chrome's supported zoom values."
   },
   "unsupportedZoomHelpTitle": {
-    "message": "Manual zoom required"
+    "message": "Manual zoom"
   },
   "currentZoomLabel": {
     "message": "Current zoom"
@@ -79,7 +79,7 @@
     "message": "Cannot control"
   },
   "unsupportedZoomHelpBody": {
-    "message": "Use Chrome's built-in zoom:"
+    "message": "Chrome does not allow extensions to control this page."
   },
   "zoomRestoredTitle": {
     "message": "Site Zoom Lock: restored to $zoom$",
@@ -96,23 +96,20 @@
     "message": "Zoom out"
   },
   "unsupportedZoomActionResetLabel": {
-    "message": "Reset"
-  },
-  "unsupportedZoomShortcutStep": {
-    "message": "Hold $modifier$, then press $key$",
-    "placeholders": {
-      "modifier": {
-        "content": "$1"
-      },
-      "key": {
-        "content": "$2"
-      }
-    }
+    "message": "Reset 100%"
   },
   "keyboardModifierCtrl": {
     "message": "Ctrl"
   },
   "keyboardModifierCommand": {
     "message": "Command"
+  },
+  "unsupportedZoomShortcutIntro": {
+    "message": "Hold $modifier$, then press:",
+    "placeholders": {
+      "modifier": {
+        "content": "$1"
+      }
+    }
   }
 }

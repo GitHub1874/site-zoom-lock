@@ -47,7 +47,7 @@
     "message": "Chrome에서 지원하는 확대/축소 값을 선택하세요."
   },
   "unsupportedZoomHelpTitle": {
-    "message": "수동 확대/축소가 필요합니다"
+    "message": "수동 확대/축소"
   },
   "currentZoomLabel": {
     "message": "현재 확대/축소"
@@ -79,7 +79,7 @@
     "message": "제어 불가"
   },
   "unsupportedZoomHelpBody": {
-    "message": "Chrome 기본 확대/축소를 사용하세요:"
+    "message": "Chrome에서는 확장 프로그램이 이 페이지를 제어할 수 없습니다."
   },
   "zoomRestoredTitle": {
     "message": "Site Zoom Lock: restored to $zoom$",
@@ -96,23 +96,20 @@
     "message": "축소"
   },
   "unsupportedZoomActionResetLabel": {
-    "message": "초기화"
-  },
-  "unsupportedZoomShortcutStep": {
-    "message": "$modifier$ 키를 누른 채 $key$ 키를 누르세요",
-    "placeholders": {
-      "modifier": {
-        "content": "$1"
-      },
-      "key": {
-        "content": "$2"
-      }
-    }
+    "message": "100%"
   },
   "keyboardModifierCtrl": {
     "message": "Ctrl"
   },
   "keyboardModifierCommand": {
     "message": "Command"
+  },
+  "unsupportedZoomShortcutIntro": {
+    "message": "$modifier$ 키를 누른 상태에서:",
+    "placeholders": {
+      "modifier": {
+        "content": "$1"
+      }
+    }
   }
 }
