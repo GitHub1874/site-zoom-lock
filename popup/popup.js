@@ -7,6 +7,8 @@ const siteStateBadge = document.getElementById('siteStateBadge');
 const zoomSelect = document.getElementById('zoomSelect');
 const pageRule = document.getElementById('pageRule');
 const unsupportedHelp = document.getElementById('unsupportedHelp');
+const windowsShortcutRow = document.getElementById('windowsShortcutRow');
+const macShortcutRow = document.getElementById('macShortcutRow');
 const liveStatus = document.getElementById('liveStatus');
 
 const MIN_ZOOM_PERCENT = 25;
@@ -86,6 +88,49 @@ function populateZoomOptions() {
     option.textContent = `${zoomPercent}%`;
     zoomSelect.append(option);
   }
+}
+
+function getPlatformInfo() {
+  return new Promise((resolve) => {
+    if (!chrome.runtime.getPlatformInfo) {
+      resolve(null);
+      return;
+    }
+
+    chrome.runtime.getPlatformInfo((platformInfo) => {
+      const error = chrome.runtime.lastError;
+      resolve(error ? null : platformInfo);
+    });
+  });
+}
+
+function updateFirstVisibleShortcut() {
+  [windowsShortcutRow, macShortcutRow].forEach((row) => {
+    row.classList.remove('first-visible-shortcut');
+  });
+
+  [windowsShortcutRow, macShortcutRow]
+    .find((row) => !row.hidden)
+    ?.classList.add('first-visible-shortcut');
+}
+
+async function applyPlatformShortcutHint() {
+  const platformInfo = await getPlatformInfo();
+  const os = platformInfo?.os;
+
+  if (os === 'mac') {
+    windowsShortcutRow.hidden = true;
+    macShortcutRow.hidden = false;
+    updateFirstVisibleShortcut();
+    return;
+  }
+
+  if (os === 'win' || os === 'linux' || os === 'cros') {
+    windowsShortcutRow.hidden = false;
+    macShortcutRow.hidden = true;
+  }
+
+  updateFirstVisibleShortcut();
 }
 
 function sendMessage(message) {
@@ -233,4 +278,5 @@ zoomSelect.addEventListener('change', () => {
 
 applyStaticI18n();
 populateZoomOptions();
+void applyPlatformShortcutHint();
 void refresh();

@@ -304,6 +304,11 @@ h1 {
   padding-top: 0;
 }
 
+.shortcut-row.first-visible-shortcut {
+  border-top: 0;
+  padding-top: 0;
+}
+
 .shortcut-label {
   color: #435140;
   font-size: 12px;
